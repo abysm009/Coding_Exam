@@ -10,7 +10,7 @@ const isLetter = (character) => {
     return (/[a-zA-Z]/).test(character)
 }
 const sameCase = (char1, char2) => {
-    if (isLetter(char1) || isLetter(char2)) {
+    if (isLetter(char1) && isLetter(char2)) {
         if (checkCase(char1) === checkCase(char2)) {
             return 1
         }
@@ -23,7 +23,7 @@ const sameCase = (char1, char2) => {
     }
 }
 
-console.log(sameCase('0', '?'))
+console.log(sameCase('a', 'g'))
 
 // 'a' and 'g' returns 1
 
